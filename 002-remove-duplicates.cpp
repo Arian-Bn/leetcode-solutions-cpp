@@ -28,19 +28,20 @@ using namespace std;
 int removeDoplicates(int arr[], int size) {
     if (size == 0) return 0;
 
-    int i = 0;
+    int i = 0;  // Index of the last unique element
 
     for (int j = 1; j < size; j++) {
         if (arr[i] != arr[j]) {
-            i++;
-            arr[i] = arr[j];
+            i++;                // Move to the next position for a new unique element
+            arr[i] = arr[j];    // Store the new unique element
         }
 
     }
 
-    return i + 1;
+    return i + 1;  // New length of the array with unique elements
 }
 
+// Test the function
 int main () {
     int arr[] = {1, 1, 2, 2, 3};
     int size = sizeof(arr) / sizeof(arr[0]);
