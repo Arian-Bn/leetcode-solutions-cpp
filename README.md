@@ -1,6 +1,5 @@
 # LeetCode Solutions in C++
 
-Этот репозиторий содержит мои решения задач с сайта [LeetCode](https://leetcode.com),  написанные на языке C++.
+This repository contains my solutions to LeetCode problems written in C++.
 
-Каждая задача — это отдельный `.cpp` файл, в котором я практикую алгоритмы и логику программирования.
-
+Each problem is saved as a separate `.cpp` file, where I practice algorithms and programming logic.
