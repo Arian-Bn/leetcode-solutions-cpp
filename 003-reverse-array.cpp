@@ -2,7 +2,7 @@
 using namespace std;
 
 /**
- * LeetCode Problem #3: Reverse String (simplified for array)
+ * LeetCode Problem #3: Reverse Array (simplified for array)
  *
  * Given an array of integers, reverse the array in-place.
  *
