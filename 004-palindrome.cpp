@@ -1,5 +1,4 @@
 #include <iostream>
-#include <string>
 
 using namespace std;
 
@@ -22,9 +21,7 @@ int main() {
     cout << "Enter text: ";
     getline(cin, text);
 
-    (isPalindrome(text))
-        ? cout << "Yes, it's a palindrome!" << endl
-        : cout << "No, it's not a palindrome." << endl;
+    (isPalindrome(text)) ? cout << "Yes, it's a palindrome!" << endl : cout << "No, it's not a palindrome." << endl;
 
     return 0;
 }
@@ -38,11 +35,9 @@ bool isPalindrome(const string& text) {
     int size = text.length();
     if (size == 0) return true;
 
-    for (int i = 0; i < size / 2; i++) {
-        if (text[i] != text[size - i - 1]) {
+    for (int i = 0; i < size / 2; i++)
+        if (text[i] != text[size - i - 1])
             return false; // Mismatch found
-        }
-    }
 
     return true; // All characters matched
 }
