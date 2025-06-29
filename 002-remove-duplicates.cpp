@@ -1,3 +1,7 @@
+#include <iostream>
+
+using namespace std;
+
 /**
 * LeetCode Problem #2: Remove Duplicates from Sorted Array
  *
@@ -13,10 +17,6 @@
  * Explanation: The function should return length = 2, with the first two elements
  * being 1 and 2 respectively. It doesn't matter what values are set beyond the returned length.
  */
-
-#include <iostream>
-
-using namespace std;
 
 /**
  * Removes duplicates from a sorted array in-place.
