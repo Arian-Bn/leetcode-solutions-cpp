@@ -1,3 +1,7 @@
+#include <iostream>
+
+using namespace std;
+
 /**
 * LeetCode Problem #1: Two Sum
  *
@@ -12,10 +16,6 @@
  * Output: [0, 1]
  * Explanation: nums[0] + nums[1] = 9
  */
-
-#include <iostream>
-
-using namespace std;
 
 /**
  * Finds two indices in the array such that their values add up to the target.
