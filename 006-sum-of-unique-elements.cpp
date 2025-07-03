@@ -3,7 +3,7 @@
 using namespace std;
 
 /**
- * LeetCode Problem #: sum of unique elements.
+ * LeetCode Problem #6: sum of unique elements.
  * Calculates the sum of all unique elements in an array.
  *
  * A unique element is defined as one that appears exactly once.
