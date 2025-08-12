@@ -27,7 +27,7 @@ using namespace std;
         introduce(): prints person's information (const method)
 
     @note All getters and introduce() are const; parameters passed as const references
-     */
+  */
 
 class Person {
     private:
