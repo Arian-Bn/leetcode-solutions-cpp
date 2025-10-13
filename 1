@@ -1,0 +1,105 @@
+#include <iostream>
+
+/*
+ * LeetCode Easy: Design a Parking System (Задача №1603)
+ *
+ * Описание:
+ * Спроектируйте систему парковки, которая может вместить автомобили трёх типов:
+ *   - Тип 1: Большой автомобиль (Big)
+ *   - Тип 2: Средний автомобиль (Medium)
+ *   - Тип 3: Маленький автомобиль (Small)
+ *
+ * У парковки есть ограниченное количество мест для каждого типа.
+ *
+ * Требуется реализовать класс ParkingSystem со следующими компонентами:
+ *
+ * 1. Конструктор:
+ *      ParkingSystem(int big, int medium, int small)
+ *    Инициализирует количество доступных мест для каждого типа.
+ *
+ * 2. Метод:
+ *      bool addCar(int carType)
+ *    - Принимает тип автомобиля (1, 2 или 3).
+ *    - Если есть свободное место для данного типа, занимает его и возвращает
+ * true.
+ *    - Иначе возвращает false.
+ *
+ * Пример использования:
+ *     ParkingSystem parking(1, 1, 0);
+ *     parking.addCar(1); // true
+ *     parking.addCar(2); // true
+ *     parking.addCar(3); // false
+ *     parking.addCar(1); // false
+ *
+ * Примечание:
+ * Эта задача проверяет понимание базового синтаксиса классов, конструкторов
+ * и методов, изменяющих состояние объекта.
+ */
+
+class ParkingSystem {
+public:
+  int big;
+  int medium;
+  int small;
+
+  ParkingSystem(int nBig, int nMedium, int nSmall)
+      : big(nBig), medium(nMedium), small(nSmall) {}
+
+  bool addCar(int carType) {
+    switch (carType) {
+    case 1:
+      if (big > 0) {
+        --big;
+        return true;
+      }
+      return false;
+      break;
+
+    case 2:
+      if (medium > 0) {
+        --medium;
+        return true;
+      }
+      return false;
+      break;
+
+    case 3:
+      if (small == 0) {
+        --small;
+        return true;
+      }
+      return true;
+
+      break;
+
+    default:
+      return false;
+    }
+  }
+};
+
+int main() {
+  ParkingSystem parkingNum1(1, 1, 0);
+
+  if (parkingNum1.addCar(1))
+    std::cout << "True" << std::endl;
+  else
+    std::cout << "False" << std::endl;
+
+  if (parkingNum1.addCar(2))
+    std::cout << "True" << std::endl;
+  else
+    std::cout << "False" << std::endl;
+
+  if (parkingNum1.addCar(3))
+    std::cout << "True" << std::endl;
+  else
+    std::cout << "False" << std::endl;
+
+  if (parkingNum1.addCar(1))
+    std::cout << "True" << std::endl;
+  else
+    std::cout << "False" << std::endl;
+
+  return 0;
+}
