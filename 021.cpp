@@ -1,0 +1,72 @@
+#include <cctype>
+#include <iostream>
+#include <string>
+
+/*
+Задача: 125. Valid Palindrome (Проверка палиндрома)
+
+Уровень: Easy
+
+Описание:
+Дана строка s. Необходимо определить, является ли она палиндромом,
+учитывая только буквенно-цифровые символы и игнорируя регистр.
+
+Палиндром - строка, которая читается одинаково слева направо и справа налево.
+
+Примеры:
+Пример 1:
+Input: s = "A man, a plan, a canal: Panama"
+Output: true
+Объяснение: "amanaplanacanalpanama" - палиндром
+
+Пример 2:
+Input: s = "race a car"
+Output: false
+Объяснение: "raceacar" - не палиндром
+
+Пример 3:
+Input: s = " "
+Output: true
+Объяснение: Пустая строка считается палиндромом
+*/
+
+class Solution {
+public:
+  bool isPalindrome(std::string s) {
+    if (s.empty())
+      return true;
+
+    std::string clean = "";
+
+    for (unsigned i = 0; i < s.length(); i++) {
+      char c = s[i];
+      if (isalnum(c)) {
+        clean += std::tolower(c);
+      }
+    }
+
+    int left = 0;
+    int right = clean.length() - 1;
+    while (left < right) {
+      if (clean[left] != clean[right])
+        return false;
+
+      left++;
+      right--;
+    }
+
+    return true;
+  }
+};
+
+int main() {
+  Solution palindrome;
+
+  std::cout << "A man, a plan, a canal: Panama" << std::endl
+            << (palindrome.isPalindrome("A man, a plan, a canal: Panama")
+                    ? "Yes"
+                    : "No")
+            << std::endl;
+
+  return 0;
+}
